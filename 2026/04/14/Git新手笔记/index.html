@@ -20,22 +20,29 @@
 
 <script class="next-config" data-name="main" type="application/json">{"hostname":"example.com","root":"/","images":"/images","scheme":"Muse","darkmode":true,"version":"8.26.0","exturl":false,"sidebar":{"position":"left","width_expanded":320,"width_dual_column":240,"display":"post","padding":18,"offset":12},"hljswrap":true,"codeblock":{"theme":{"light":"default","dark":"stackoverflow-dark"},"prism":{"light":"prism","dark":"prism-dark"},"copy_button":{"enable":false,"style":null},"fold":{"enable":false,"height":500},"language":false},"bookmark":{"enable":false,"color":"#222","save":"auto"},"mediumzoom":false,"lazyload":false,"pangu":false,"comments":{"style":"tabs","active":null,"storage":true,"lazyload":false,"nav":null},"stickytabs":false,"motion":{"enable":true,"async":false,"duration":200,"transition":{"menu_item":"fadeInDown","post_block":"fadeIn","post_header":"fadeInDown","post_body":"fadeInDown","coll_header":"fadeInLeft","sidebar":"fadeInUp"}},"i18n":{"placeholder":"搜索...","empty":"没有找到任何搜索结果：${query}","hits_time":"找到 ${hits} 个搜索结果（用时 ${time} 毫秒）","hits":"找到 ${hits} 个搜索结果"}}</script><script src="/js/config.js" defer></script>
 
-    <meta property="og:type" content="website">
-<meta property="og:title" content="MUMU BLOG">
-<meta property="og:url" content="http://example.com/empty/index.html">
+    <meta name="description" content="一、Git 基础认知1.1 核心概念 工作区（Working Directory）：本地正在编辑的文件目录，肉眼可见、可直接修改。  暂存区（Staging Area）：临时存放待提交的修改。  本地仓库（Local Repository）：存放在本地电脑里的版本库，记录所有提交记录，可回溯、回滚。  远程仓库（Remote Repository）：存放在服务器（如GitHub、GitLab）的仓">
+<meta property="og:type" content="article">
+<meta property="og:title" content="Git新手笔记">
+<meta property="og:url" content="http://example.com/2026/04/14/Git%E6%96%B0%E6%89%8B%E7%AC%94%E8%AE%B0/index.html">
 <meta property="og:site_name" content="MUMU BLOG">
+<meta property="og:description" content="一、Git 基础认知1.1 核心概念 工作区（Working Directory）：本地正在编辑的文件目录，肉眼可见、可直接修改。  暂存区（Staging Area）：临时存放待提交的修改。  本地仓库（Local Repository）：存放在本地电脑里的版本库，记录所有提交记录，可回溯、回滚。  远程仓库（Remote Repository）：存放在服务器（如GitHub、GitLab）的仓">
 <meta property="og:locale" content="zh_CN">
+<meta property="article:published_time" content="2026-04-14T03:01:53.000Z">
+<meta property="article:modified_time" content="2026-04-14T03:03:31.340Z">
 <meta property="article:author" content="沐凩">
+<meta property="article:tag" content="Git">
+<meta property="article:tag" content="Github">
+<meta property="article:tag" content="教程">
 <meta name="twitter:card" content="summary">
 
 
-<link rel="canonical" href="http://example.com/empty/">
+<link rel="canonical" href="http://example.com/2026/04/14/Git%E6%96%B0%E6%89%8B%E7%AC%94%E8%AE%B0/">
 
 
-<script class="next-config" data-name="page" type="application/json">{"sidebar":"","isHome":true,"isPost":false,"lang":"zh-CN","comments":"","permalink":"","path":"empty/index.html","title":""}</script>
+<script class="next-config" data-name="page" type="application/json">{"sidebar":"","isHome":false,"isPost":true,"lang":"zh-CN","comments":true,"permalink":"http://example.com/2026/04/14/Git%E6%96%B0%E6%89%8B%E7%AC%94%E8%AE%B0/","path":"2026/04/14/Git新手笔记/","title":"Git新手笔记"}</script>
 
 <script class="next-config" data-name="calendar" type="application/json">""</script>
-<title>MUMU BLOG</title>
+<title>Git新手笔记 | MUMU BLOG</title>
   
 
 
@@ -85,7 +92,7 @@
 
     <a href="/" class="brand" rel="start">
       <i class="logo-line"></i>
-      <h1 class="site-title">MUMU BLOG</h1>
+      <p class="site-title">MUMU BLOG</p>
       <i class="logo-line"></i>
     </a>
   </div>
@@ -111,7 +118,7 @@
   
   <aside class="sidebar">
 
-    <div class="sidebar-inner sidebar-overview-active">
+    <div class="sidebar-inner sidebar-nav-active sidebar-toc-active">
       <ul class="sidebar-nav">
         <li class="sidebar-nav-toc">
           文章目录
@@ -124,6 +131,7 @@
       <div class="sidebar-panel-container">
         <!--noindex-->
         <div class="post-toc-wrap sidebar-panel">
+            <div class="post-toc animated"><ol class="nav"><li class="nav-item nav-level-2"><a class="nav-link" href="#%E4%B8%80%E3%80%81Git-%E5%9F%BA%E7%A1%80%E8%AE%A4%E7%9F%A5"><span class="nav-number">1.</span> <span class="nav-text">一、Git 基础认知</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#1-1-%E6%A0%B8%E5%BF%83%E6%A6%82%E5%BF%B5"><span class="nav-number">1.1.</span> <span class="nav-text">1.1 核心概念</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%E4%BA%8C%E3%80%81%E5%9F%BA%E7%A1%80%E5%B8%B8%E7%94%A8%E6%93%8D%E4%BD%9C"><span class="nav-number">2.</span> <span class="nav-text">二、基础常用操作</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#2-1-%E4%BB%93%E5%BA%93%E5%88%9D%E5%A7%8B%E5%8C%96%E4%B8%8E%E5%85%B3%E8%81%94"><span class="nav-number">2.1.</span> <span class="nav-text">2.1 仓库初始化与关联</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#2-2-%E5%88%86%E6%94%AF%E5%9F%BA%E7%A1%80%E6%93%8D%E4%BD%9C"><span class="nav-number">2.2.</span> <span class="nav-text">2.2 分支基础操作</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#2-3-%E4%BB%A3%E7%A0%81%E6%8F%90%E4%BA%A4"><span class="nav-number">2.3.</span> <span class="nav-text">2.3 代码提交</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#2-4-%E6%8B%89%E5%8F%96%E4%B8%8E%E6%8E%A8%E9%80%81"><span class="nav-number">2.4.</span> <span class="nav-text">2.4 拉取与推送</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#2-5-Stash-%E6%93%8D%E4%BD%9C%EF%BC%88%E4%B8%B4%E6%97%B6%E4%BF%9D%E5%AD%98%E4%BB%A3%E7%A0%81%EF%BC%89"><span class="nav-number">2.5.</span> <span class="nav-text">2.5 Stash 操作（临时保存代码）</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%E5%B8%B8%E8%A7%81%E9%97%AE%E9%A2%98"><span class="nav-number">3.</span> <span class="nav-text">常见问题</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#git-bash-%E8%BF%9E%E6%8E%A5github%E5%A4%B1%E8%B4%A5"><span class="nav-number">3.1.</span> <span class="nav-text">git bash 连接github失败</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%E5%9B%9B%E3%80%81%E5%B8%B8%E7%94%A8%E5%91%BD%E4%BB%A4%E9%80%9F%E6%9F%A5%E8%A1%A8%EF%BC%88%E5%BF%AB%E9%80%9F%E6%A3%80%E7%B4%A2%EF%BC%8C%E5%A4%8D%E5%88%B6%E5%8D%B3%E7%94%A8%EF%BC%89"><span class="nav-number">4.</span> <span class="nav-text">四、常用命令速查表（快速检索，复制即用）</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%E4%BA%94%E3%80%81%E6%B3%A8%E6%84%8F%E4%BA%8B%E9%A1%B9"><span class="nav-number">5.</span> <span class="nav-text">五、注意事项</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#1-Commit%E8%A7%84%E8%8C%83"><span class="nav-number">5.1.</span> <span class="nav-text">1. Commit规范</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#2-%E5%85%B6%E4%BB%96"><span class="nav-number">5.2.</span> <span class="nav-text">2. 其他</span></a></li></ol></li></ol></div>
         </div>
         <!--/noindex-->
 
@@ -161,16 +169,17 @@
 
     </div>
 
-    <div class="main-inner index posts-expand">
+    <div class="main-inner post posts-expand">
 
-    
+
+  
 
 
 <div class="post-block">
   
   
 
-  <article itemscope itemtype="http://schema.org/Article" class="post-content" lang="">
+  <article itemscope itemtype="http://schema.org/Article" class="post-content" lang="zh-CN">
     <link itemprop="mainEntityOfPage" href="http://example.com/2026/04/14/Git%E6%96%B0%E6%89%8B%E7%AC%94%E8%AE%B0/">
 
     <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
@@ -184,13 +193,13 @@
     </span>
 
     <span hidden itemprop="post" itemscope itemtype="http://schema.org/CreativeWork">
-      <meta itemprop="name" content=" | MUMU BLOG">
+      <meta itemprop="name" content="Git新手笔记 | MUMU BLOG">
       <meta itemprop="description" content="">
     </span>
       <header class="post-header">
-        <h2 class="post-title" itemprop="name headline">
-          <a href="/2026/04/14/Git%E6%96%B0%E6%89%8B%E7%AC%94%E8%AE%B0/" class="post-title-link" itemprop="url">Git新手笔记</a>
-        </h2>
+        <h1 class="post-title" itemprop="name headline">
+          Git新手笔记
+        </h1>
 
         <div class="post-meta-container">
           <div class="post-meta">
@@ -213,8 +222,7 @@
     
     
     
-    <div class="post-body" itemprop="articleBody">
-          <h2 id="一、Git-基础认知"><a href="#一、Git-基础认知" class="headerlink" title="一、Git 基础认知"></a>一、Git 基础认知</h2><h3 id="1-1-核心概念"><a href="#1-1-核心概念" class="headerlink" title="1.1 核心概念"></a>1.1 核心概念</h3><ul>
+    <div class="post-body" itemprop="articleBody"><h2 id="一、Git-基础认知"><a href="#一、Git-基础认知" class="headerlink" title="一、Git 基础认知"></a>一、Git 基础认知</h2><h3 id="1-1-核心概念"><a href="#1-1-核心概念" class="headerlink" title="1.1 核心概念"></a>1.1 核心概念</h3><ul>
 <li><p>工作区（Working Directory）：本地正在编辑的文件目录，肉眼可见、可直接修改。</p>
 </li>
 <li><p>暂存区（Staging Area）：临时存放待提交的修改。</p>
@@ -358,7 +366,6 @@
 <p>（注：文档部分内容由 AI 生成）</p>
 </blockquote>
 
-      
     </div>
 
     
@@ -366,177 +373,44 @@
     
 
     <footer class="post-footer">
-        <div class="post-eof"></div>
-      
-    </footer>
-  </article>
-</div>
+          
 
-
-
-
-    
-
-
-<div class="post-block">
-  
-  
-
-  <article itemscope itemtype="http://schema.org/Article" class="post-content" lang="">
-    <link itemprop="mainEntityOfPage" href="http://example.com/2026/01/06/%E4%B8%AA%E4%BA%BA%E5%8D%9A%E5%AE%A2%E6%90%AD%E5%BB%BA/">
-
-    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
-      <meta itemprop="image" content="/images/avatar.gif">
-      <meta itemprop="name" content="沐凩">
-    </span>
-
-    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
-      <meta itemprop="name" content="MUMU BLOG">
-      <meta itemprop="description" content="">
-    </span>
-
-    <span hidden itemprop="post" itemscope itemtype="http://schema.org/CreativeWork">
-      <meta itemprop="name" content=" | MUMU BLOG">
-      <meta itemprop="description" content="">
-    </span>
-      <header class="post-header">
-        <h2 class="post-title" itemprop="name headline">
-          <a href="/2026/01/06/%E4%B8%AA%E4%BA%BA%E5%8D%9A%E5%AE%A2%E6%90%AD%E5%BB%BA/" class="post-title-link" itemprop="url">Hexo 博客搭建教程集</a>
-        </h2>
-
-        <div class="post-meta-container">
-          <div class="post-meta">
-    <span class="post-meta-item">
-      <span class="post-meta-item-icon">
-        <i class="far fa-calendar"></i>
-      </span>
-      <span class="post-meta-item-text">发表于</span>
-      
-
-      <time title="创建时间：2026-01-06 15:39:38 / 修改时间：15:43:07" itemprop="dateCreated datePublished" datetime="2026-01-06T15:39:38+08:00">2026-01-06</time>
-    </span>
-
-  
-</div>
-
-        </div>
-      </header>
-
-    
-    
-    
-    <div class="post-body" itemprop="articleBody">
-          <h1 id="前置安装"><a href="#前置安装" class="headerlink" title="前置安装"></a>前置安装</h1><h2 id="git"><a href="#git" class="headerlink" title="git"></a>git</h2><p><a target="_blank" rel="noopener" href="https://blog.csdn.net/deltadev/article/details/148623341">Git安装教程 2025最新版详细图文安装教程（超详细）git安装步骤-CSDN博客</a></p>
-<h2 id="Node-js"><a href="#Node-js" class="headerlink" title="Node.js"></a>Node.js</h2><p>一个基于 Chrome V8 引擎的 JavaScript 运行时环境，让 JavaScript 代码脱离浏览器，能够在服务器端 &#x2F; 本地环境中执行。</p>
+<div class="post-copyright">
 <ul>
-<li><a target="_blank" rel="noopener" href="https://blog.csdn.net/chanyeolchichi/article/details/121348541">Node.js详细安装教程（2021）nodejs安装-CSDN博客</a></li>
-<li><a target="_blank" rel="noopener" href="https://blog.csdn.net/yy1715713348/article/details/142741619">2024最新版Node.js下载安装及环境配置教程（非常详细）-CSDN博客</a><br>配置环境变量的时候，发现笔记本系统里进不去高级系统设置……不知道是不是这个win11版本的bug。需要用win+R打开：</li>
-<li>按Windows + R快捷键打开「运行」对话框，执行systempropertiesadvanced命令打开「系统属性」</li>
+  <li class="post-copyright-author">
+      <strong>本文作者： </strong>沐凩
+  </li>
+  <li class="post-copyright-link">
+      <strong>本文链接：</strong>
+      <a href="http://example.com/2026/04/14/Git%E6%96%B0%E6%89%8B%E7%AC%94%E8%AE%B0/" title="Git新手笔记">http://example.com/2026/04/14/Git新手笔记/</a>
+  </li>
+  <li class="post-copyright-license">
+      <strong>版权声明： </strong>本博客所有文章除特别声明外，均采用 <a href="https://creativecommons.org/licenses/by-nc-sa/4.0/deed.zh" rel="noopener" target="_blank"><i class="fab fa-fw fa-creative-commons"></i>BY-NC-SA</a> 许可协议。转载请注明出处！
+  </li>
 </ul>
-<h1 id="hexo"><a href="#hexo" class="headerlink" title="hexo"></a>hexo</h1><h2 id="教程"><a href="#教程" class="headerlink" title="教程"></a>教程</h2><p><a target="_blank" rel="noopener" href="https://www.cnblogs.com/junlin623/p/17410016.html">Windows下hexo个人博客详细搭建教程 - junlin623 - 博客园</a><br><a target="_blank" rel="noopener" href="https://zhuanlan.zhihu.com/p/547520780">2022 Hexo 博客搭建和使用教程(Windows) - 知乎</a></p>
-<h2 id="hexo主题-next"><a href="#hexo主题-next" class="headerlink" title="hexo主题-next"></a>hexo主题-next</h2><p>官方文档：<a target="_blank" rel="noopener" href="https://theme-next.js.org/">NexT - Theme for Hexo</a><br>GitHub主页：<a target="_blank" rel="noopener" href="https://github.com/next-theme/hexo-theme-next">GitHub - next-theme&#x2F;hexo-theme-next</a><br>NexT教程：<a target="_blank" rel="noopener" href="https://zhuanlan.zhihu.com/p/618864711">Hexo+Next主题搭建个人博客+优化全过程（完整详细版） - 知乎</a></p>
+</div>
 
-      
-    </div>
+          <div class="post-tags">
+              <a href="/tags/%E6%95%99%E7%A8%8B/" rel="tag"># 教程</a>
+              <a href="/tags/Git/" rel="tag"># Git</a>
+              <a href="/tags/Github/" rel="tag"># Github</a>
+          </div>
 
-    
-    
-    
+        
 
-    <footer class="post-footer">
-        <div class="post-eof"></div>
-      
+          <div class="post-nav">
+            <div class="post-nav-item">
+                <a href="/2026/01/06/%E4%B8%AA%E4%BA%BA%E5%8D%9A%E5%AE%A2%E6%90%AD%E5%BB%BA/" rel="prev" title="Hexo 博客搭建教程集">
+                  <i class="fa fa-angle-left"></i> Hexo 博客搭建教程集
+                </a>
+            </div>
+            <div class="post-nav-item">
+            </div>
+          </div>
     </footer>
   </article>
 </div>
 
-
-
-
-    
-
-
-<div class="post-block">
-  
-  
-
-  <article itemscope itemtype="http://schema.org/Article" class="post-content" lang="">
-    <link itemprop="mainEntityOfPage" href="http://example.com/2026/01/04/hello-world/">
-
-    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
-      <meta itemprop="image" content="/images/avatar.gif">
-      <meta itemprop="name" content="沐凩">
-    </span>
-
-    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
-      <meta itemprop="name" content="MUMU BLOG">
-      <meta itemprop="description" content="">
-    </span>
-
-    <span hidden itemprop="post" itemscope itemtype="http://schema.org/CreativeWork">
-      <meta itemprop="name" content=" | MUMU BLOG">
-      <meta itemprop="description" content="">
-    </span>
-      <header class="post-header">
-        <h2 class="post-title" itemprop="name headline">
-          <a href="/2026/01/04/hello-world/" class="post-title-link" itemprop="url">Hello World</a>
-        </h2>
-
-        <div class="post-meta-container">
-          <div class="post-meta">
-    <span class="post-meta-item">
-      <span class="post-meta-item-icon">
-        <i class="far fa-calendar"></i>
-      </span>
-      <span class="post-meta-item-text">发表于</span>
-
-      <time title="创建时间：2026-01-04 16:09:15" itemprop="dateCreated datePublished" datetime="2026-01-04T16:09:15+08:00">2026-01-04</time>
-    </span>
-    <span class="post-meta-item">
-      <span class="post-meta-item-icon">
-        <i class="far fa-calendar-check"></i>
-      </span>
-      <span class="post-meta-item-text">更新于</span>
-      <time title="修改时间：2026-01-06 14:16:48" itemprop="dateModified" datetime="2026-01-06T14:16:48+08:00">2026-01-06</time>
-    </span>
-
-  
-</div>
-
-        </div>
-      </header>
-
-    
-    
-    
-    <div class="post-body" itemprop="articleBody">
-          <p>Welcome to <a target="_blank" rel="noopener" href="https://hexo.io/">Hexo</a>! This is your very first post. Check <a target="_blank" rel="noopener" href="https://hexo.io/docs/">documentation</a> for more info. If you get any problems when using Hexo, you can find the answer in <a target="_blank" rel="noopener" href="https://hexo.io/docs/troubleshooting.html">troubleshooting</a> or you can ask me on <a target="_blank" rel="noopener" href="https://github.com/hexojs/hexo/issues">GitHub</a>.</p>
-<h2 id="Quick-Start"><a href="#Quick-Start" class="headerlink" title="Quick Start"></a>Quick Start</h2><h3 id="Create-a-new-post"><a href="#Create-a-new-post" class="headerlink" title="Create a new post"></a>Create a new post</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ hexo new <span class="string">&quot;My New Post&quot;</span></span><br></pre></td></tr></table></figure>
-
-<p>More info: <a target="_blank" rel="noopener" href="https://hexo.io/docs/writing.html">Writing</a></p>
-<h3 id="Run-server"><a href="#Run-server" class="headerlink" title="Run server"></a>Run server</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ hexo server</span><br></pre></td></tr></table></figure>
-
-<p>More info: <a target="_blank" rel="noopener" href="https://hexo.io/docs/server.html">Server</a></p>
-<h3 id="Generate-static-files"><a href="#Generate-static-files" class="headerlink" title="Generate static files"></a>Generate static files</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ hexo generate</span><br></pre></td></tr></table></figure>
-
-<p>More info: <a target="_blank" rel="noopener" href="https://hexo.io/docs/generating.html">Generating</a></p>
-<h3 id="Deploy-to-remote-sites"><a href="#Deploy-to-remote-sites" class="headerlink" title="Deploy to remote sites"></a>Deploy to remote sites</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ hexo deploy</span><br></pre></td></tr></table></figure>
-
-<p>More info: <a target="_blank" rel="noopener" href="https://hexo.io/docs/one-command-deployment.html">Deployment</a></p>
-
-      
-    </div>
-
-    
-    
-    
-
-    <footer class="post-footer">
-        <div class="post-eof"></div>
-      
-    </footer>
-  </article>
-</div>
 
 
 
